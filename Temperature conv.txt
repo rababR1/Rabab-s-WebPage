@@ -1,0 +1,7 @@
+# Temperature Conversions by Rabab Rahman
+
+a= int(input("Please Enter Farhreinheit: "))
+sum= (a-32)*0.56
+round(sum)
+print("Converted to Celcius", round(sum))
+

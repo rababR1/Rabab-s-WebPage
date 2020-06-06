@@ -1,0 +1,68 @@
+#Coupons with parmameters by Rabab Rahman
+#Wedsnday, May 13th, 2020
+def instructions():
+    print("Programmmed by Rabab")
+    print("In order to pass this program, enter the values below.")
+
+    #Displays the programmer's name and tells the user on how to use the program
+instructions()
+def customer():#defines a function for displaying the customer name
+    customerName = input("Please enter customer name: ")  # Ask the user to enter the customer name
+    print("Customer name is", customerName)
+customer()#Calls the function
+amountSpent = float(input("Please enter your costs :"))
+# Costs for earning coupons:
+# $0-10: 0% coupon
+# $10-60: 8% coupon
+# $60-150: 10% coupon
+# $150-210: 12% coupon
+# $210 and above: 14% coupon
+discountEighth = amountSpent * 0.08  # Calculates the discount
+DiscountTotal = amountSpent - discountEighth  # Calculates the money after discount
+discountTen = amountSpent * 0.1  # Calculates the discount
+DiscountTotal = amountSpent - discountTen  # Calculates the money after discount
+discountTwelve = amountSpent * 0.12  # Calculates the discount
+DiscountTotal = amountSpent - discountTwelve  # Calculates the money after discount
+discountFourteen = amountSpent * 0.14  # Calculates the discount
+DiscountTotal = amountSpent - discountFourteen  # Calculates the money after discount
+
+
+# Defines a function that'll determine the money saved based on the amount spent with the coupon:
+def coupons(amountSpent):
+
+    if amountSpent<10:
+        print("Sorry! You didn't qualify for any coupon due to your spendings, since it's below the limit!")
+        DiscountTotal = amountSpent#Only for when the amount spent is less than 10= No coupon
+        print("Your total amount is : $",DiscountTotal)
+    elif amountSpent<60:
+        #Calls the discount calculations and the money saved with each coupon
+        discountEighth= amountSpent*0.08
+        DiscountTotal= amountSpent-discountEighth
+        print("Congratulations! You got coupon for 8% discount!")#Displays the coupon percentage
+        print("Your total amount after discount is :$",DiscountTotal)#Displays the money saved
+    elif amountSpent<150:
+        discountTen=amountSpent*0.1
+        DiscountTotal=amountSpent-discountTen
+        print("Congratulations! You got coupon for 10% discount!")#Displays the coupon percentage
+        print("Your total amount after discount is:$", DiscountTotal)#Displays the money saved
+    elif amountSpent<210:
+        discountTwelve= amountSpent *0.12
+        DiscountTotal=amountSpent-discountTwelve
+        print("Congratulations! You got coupon for 12% discount!")#Displays the coupon percentage
+        print("TYour total amount after discount is:$", DiscountTotal)#Displays the money saved
+    elif amountSpent>=210:
+        discountFourteen = amountSpent*0.14
+        DiscountTotal=amountSpent-discountFourteen 
+        print("Congratulations! You got coupon for 14% discount!")#Displays the coupon percent
+        print("Your total amount after discount is:$",DiscountTotal)#Displays the money saved
+coupons(amountSpent)
+userEntry=input("Do you wish to continue? Type Y for yes or press any other key to exit:")#Allows the user to countinue once more
+while userEntry=="Y":# it will be in the loop until  the user selects "Y" for yes
+    customer()#Calling back the function
+    amountSpent = float(input("Please enter your costs :"))
+    coupons(amountSpent)#Calling back the function
+    userEntry=input("Do you wish to continue? Type Y for yes or press any other key to exit:")#Calls back the variables
+#Displays a goodbye message to the user if they don't type in Y:
+print("Thank you for participating in this program.")
+print("Have a great day!")
+#END PROGRAM....

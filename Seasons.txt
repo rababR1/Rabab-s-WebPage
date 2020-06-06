@@ -1,0 +1,29 @@
+#Seasons by Rabab Rahman
+#Monday, April 6th, 2020
+#Inputting the month(Words)
+month = input("Input the month (e.g. January, February etc.): ")
+
+if month in ('January', 'February', 'March'):
+	season = 'winter'
+elif month in ('April', 'May', 'June'):
+	season = 'spring'
+elif month in ('July', 'August', 'September'):
+	season = 'summer'
+elif month in ('October', 'November', 'December'):
+	season = 'fall'
+
+print("Season is",season)
+
+#Inputting month(numbers)
+day = int(input("Input Month Number: "))
+if day <=3:
+	season = 'winter'
+elif day <=6:
+    season = 'spring'
+elif day <= 9:
+	season = 'summer'
+elif day <=12:
+	season = 'fall'
+
+print("Season is",season)
+

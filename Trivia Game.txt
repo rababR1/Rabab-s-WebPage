@@ -1,0 +1,82 @@
+##created by Rabab
+# May 28th, 2020
+# The theme is trivia
+def intro():
+    # Displays an intro to the game.
+    print("Some of these common myths are true and others are completely false.")
+    print("Do you think you can guess which of these beliefs is true? It's time to put your knowledge to the test.")
+intro()
+def playerName():
+    playerName = input("please enter your name: ")
+    print("Well,", playerName, "let's get this game started, shall we?")
+playerName()
+def trivia():
+    # Displays questions in the function
+    firstQuestion = input("True or false: Vitamin C does not prevent the common cold. ")
+    secondQuestion = input("True or false: Chewing gum takes seven years to digest.")
+    thirdQuestion = input(
+        "True or false: Cracking one's knuckles in good health doesn't cause arthritis or other issues.")
+    fourthQuestion = input("True or false: Chameleons change their color to blend in with their surroundings.")
+    fifthQuestion = input("True or false: Tomatoes are vegetables: ")
+    sixthQuestion = input(
+        "True or false: A standard cup of brewed coffee \n has more caffeine than a single shot of espresso.")
+    seventhQuestion = input("True or false: Poinsettas will kill you if you eat them. ")
+    eigthQuestion= input("True or false: Drinking milk or consuming other dairy products does not increase mucus production.")
+    ninthQuestion=input("True or False: Waking a sleepwalking person will kill them. ")
+    lastQuestion=input("True or false: Twinkies never go bad. ")
+    # Creating two lists for all possible ways on how the user will respond.
+    true = ["T", "t", "True", "true"]
+    false = ["F", "f", "False", "false"]
+    score = 0  # Storing the correct answers
+    if firstQuestion in true:
+        score += 1  # Scores 1 point if the user got the answer correct
+    else:
+        score += 0  # If the user scored wrong, there will be no points
+    if secondQuestion in false:
+        score += 1  # Scores 1 point if the user got the answer correct
+    else:
+        score += 0
+    if thirdQuestion in true:
+        score += 1  # Scores 1 point if the user got the answer correct
+    else:
+        score += 0
+    if fourthQuestion in false:
+        score += 1  # Scores 1 point if the user got the answer correct
+    else:
+        score += 0
+    if fifthQuestion in false:
+        score += 1  # Scores 1 point if the user got the answer correct
+    else:
+        score += 0
+        if sixthQuestion in true:
+            score += 1
+        else:
+            score += 0
+        if seventhQuestion in false:
+            score+=1
+        else:
+            score+=0
+        if eigthQuestion in true:
+          score+=1
+        else:
+          score+=0
+        if ninthQuestion in false:
+          score+=1
+        else:
+          score+=0
+        if lastQuestion in false:
+          score+=1
+        else:
+          score+=0
+    print("You scored", score, "/10")  # Displays how the user did on the quiz
+trivia()
+userEntry = input("Do you wish to continue? Type in Y or press any key to exit: ")
+while userEntry == "Y":
+    # Redos the same intro that the user entered
+    intro()
+    playerName()
+    trivia()
+    userEntry = input("Do you wish to continue?")  # Gives the user another chance to countinue
+print("Thanks for playing!")
+print("Goodbye.")  # Displays goodbye message
+# End program

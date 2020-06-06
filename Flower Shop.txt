@@ -1,0 +1,41 @@
+# Flower Shop Functions by Rabab Rahman
+# Monday, April 27th, 2020
+def instructions():#This function currently being defined to get the programmer's name and tells the steps to pass this program
+   print("Welcome to flower shop, Programmed by Rabab")
+   print("In order to pass this program, enter the values below.")
+
+instructions()
+#Displays the programmer's name and tells the user on how to pass the program.
+def employee():#employee is the called function
+    firstName = input("Enter Employee's First Name: ")
+    idNum = float(input("Enter Employee's ID Number: "))  # used float instead of input If the user enters a decimal number
+    print("Employee name:", firstName)
+    print("Employee ID:", idNum)
+#Displays the user's first name and ID number
+employee()
+def sale():
+    flowerNum = int(input('How many flowers would you like to order?'))
+    # Adding up the price of flower with the GST and the shipping charge
+    price = 3.5
+    total = flowerNum * price  # 3.50 is the price of one flower
+    gst = total * 0.05
+    shipCharge = 2
+    grandPurchase = total + gst + shipCharge
+    print("Your total price including shipping is:",grandPurchase)
+sale()
+#The next entry gives the user a chance to countinue on with the program:
+userEntry= input("Do you wish to continue, Type Y [Yes] for another transaction or  any other key to exit)?: ")
+#Re-Entering the same values in the beginning of the program:
+while userEntry=="Y": # It will be in the loop when user wants to continue
+    employee()
+    sale()
+    userEntry= input("Do you wish to continue, Type Y [Yes] for another transaction or any other key to exit)?:")
+
+#while userEntry=="No":
+#      break
+print("Thank you for participating in this program.")
+print("GoodBye")
+
+#END PROGRAM
+#Edited for final submissions on Thursday, April 30th, 2020
+#Finalized on Saturday May 2nd, 2020

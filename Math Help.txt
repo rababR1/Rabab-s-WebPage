@@ -1,0 +1,41 @@
+#Math Help by Rabab Rahman
+
+def add():  # function defined for addition
+    firstNum = float(input("Enter your first number for addition: "))
+    secondNum = float(input("Enter your second number for addition: "))
+    sum = firstNum + secondNum
+    print("The sum of the two numbers is", sum)
+add()
+def subtract():  # defining a function for subtracting two numbers
+    subFirst = float(input("Enter your first number for subtraction: "))
+    subSecond = float(input("Enter your second number for subtraction: "))
+    difference = subFirst - subSecond
+    print("The difference is", difference)
+subtract()
+def multiply():
+    Xfirst = float(input("Enter your first number for multiplication: "))
+    Xsecond = float(input("Enter your second number for multiplication: "))
+    total = Xfirst * Xsecond
+    print("The total of the two numbers is", total)
+multiply()  # calling defined function
+def divide():
+    divFirst = float(input("Enter your first number for division: "))
+    divSecond = float(input("Enter your second number for division: "))
+    quotient = divFirst / divSecond
+    print("The quotient of the two numbers is", quotient)
+divide()
+ContinueEntry = input(
+    "Do you wish to continue (Type Y or any other key to exit)?: ")  # Giving an option to let the user continue on with the program
+while ContinueEntry == "Y":
+    userEntry = input("Press A to add, S to subtract, M to multiply, or D to divide: ")
+    if userEntry == "A":
+        add()#Calls back the function
+    elif userEntry == "S":
+       subtract()#Calls back the function
+    elif userEntry == "M":
+        multiply()#Calls back the function
+    elif userEntry == "D":
+        divide()#Calls back the function
+    ContinueEntry = input("Do you wish to continue (Type Y or any other key to exit)?: ")
+# End program
+

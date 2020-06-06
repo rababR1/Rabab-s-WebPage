@@ -1,0 +1,32 @@
+capacity= 50
+enter= list(range(1-50))
+total=0
+
+
+#enter=  int(input("Enter the number of people coming in (+)  or leaving (-) :"))
+while(True):
+    enter = int(input("Enter the number of people coming in (+)  or leaving (-) [1-50]  :" ))
+    if 0 < enter < 50:
+        break
+    print("Invalid input. Please try again.")
+
+total= total + enter
+if total>=capacity:
+    total= int(input("Enter the number of people coming in or leaving:"))
+print("The number of people in the restaurant is ", enter)
+print("The restaurant isn't full yet!")
+while total<=capacity:
+    newGuests= int(input("Enter the number of guests coming in (+) or leaving (-) :"))
+    if total >= capacity:
+        print("The resturant is full. Please come again.")
+        break
+        #newGuests=int(input("Enter the number of guests"))
+    total= total + newGuests
+    if total > capacity:
+        print("The number of people who entered or left is", newGuests, "The total number of guest currently  are", total)
+        print("The resturant is full. Please come again.")
+        break
+    print("The number of people who entered or left is",newGuests,"The total number of guests currently are",total)
+#End program
+#Resturant capacity by Rabab Rahman
+#Wednsday, April 15th, 2020

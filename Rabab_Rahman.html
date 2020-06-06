@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Official site of Rabab Rahman</title>
-    <link href="first wepage.css" rel="stylesheet" type="text/css">
+    <link href="RababR.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-</div>
-<div class="title">
+    <div class="title">
+        <div id=nav class=sideNav>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="About Me.html">About Me</a>
+            <a href="creations.html">Projects</a>
+            <a href="interests.html">My Interests</a>
+            <a href="beliefs.html">What I believe...</a></div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
     <style type= "text/css">
         body{
             background-image: url(photo-of-starry.jpg);
@@ -18,54 +25,66 @@
         h1{
             margin:0
         }
-        </style><div class="focus-in-expand">
+        </style>
+        <div class="focus-in-expand">
     <div class=swirl-in-bck>
 	<p>Hey, I'm...</p>
-    <h1>Rabab Rahman</h> </h1>
+    <h1>Rabab Rahman</h1>
     </div>
+<br>
+<span>
+<div class="mySlides fade">
+   <div class="numbertext"></div>
+   <img src="Rabab_picture1.JPG" style="width:100%">
+</div>
+<div class="mySlides fade">
+    <img src="Rabab_picture2.JPG" style="width:100%">
+</div>
+<div class="mySlides fade">
+    <img src= "Rabab_picture3.JPG" style= "width:100%">
 </div>
 </div>
-
-<div class="flip-in-hor-bottom">
-<div class="info">
-    <div class="text-shadow-drop-left">
-        <img src="Rabab_picture.JPG"align=right width= 150px height=150px>
-    <h4>About   Me:</h4>
-    </div>
-    <div class="box">
-    <h5>I am a student at high school studying computer science and web design . I started learning about Web Design and Computer Science from semester 2 at my school, trying to learn the basics of HTML,CSS,Javascript and the Python language.Besides schoolwork, I enjoy reading, playing video games(See my Twitch streams!) and sketching comics. Also, I like to travel new places and try new cuisine</h5>  </div>
-<div class="projects">
-    <div data-aos="fade-up">
-    <div class="tracking-in-contract">
-   <h6>Developed... so far:</h6>
-   </div>
-   </div>
-   <p style= "font-size: 19px;">Python Assignments:</p>
-    <li>Restaurant Capacity
-    <li>Restaurant Capacity
-    <li>Flower Shop
-    <li>Math Help
-    <li>Seasons
-    <li>Temperature conversions</li>
 </div>
+<div class="mySlides fade">
+    <img src="Rabab_picture4.JPG" style="width:99%">
 </div>
-<div class="interests">
-    <div class=text-focus-in>
-   <h3> My Interests</h3>
-   </div>
-   <ul>Gaming -- Subscribe to me on Twitch and follow my Discord server!</ul>
-   <ul>Coding-- I enjoy coding and get excitement to develop something challenging. Find my HTML, CSS, and JS Pens on CodePen and Python repls on Repl.it!</ul>
-
-   <ul>Doodling/Drawing</ul>
+</div></span>
+<br>
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+<div class= multimedia-container>
 <div class="multimedia">
-    <h2>Follow Me!</h2>
-    <a href="https://codepen.io/Rababr1"><img src="iconfinder_56_939818.png" width="60px" height=60px></a>
-    <a href=https://www.twitch.tv/rababr1><img src="iconfinder_twitch_5017729.png"width="60px" height=60px></a>
-    <a href="https://repl.it/@RababRahman"><img src="repl.it button.png" width="60px" height=60px></a>
-    <a href="https:discord.com"><img src="icons8-discord-100.png" width="60px" height="60px"></a>
-    <a href="mailto:rababr1@educbe.ca"><img src="iconfinder_web_5_3924900.png" width="60px" height=50px></a>
-</div>
-</div>
-<script src="rababr.js"></script>
+<h2>Follow Me!</h2>
+<a href="https://codepen.io/Rababr1"><img src="iconfinder_56_939818.png" width="60px" height=60px></a>
+ <a href=https://www.twitch.tv/rababr1><img src="iconfinder_twitch_5017729.png"width="60px" height=60px></a>
+ <a href="https://repl.it/@RababRahman"><img src="repl.it button.png" width="60px" height=60px></a>
+ <a href="https:discord.com"><img src="icons8-discord-100.png" width="60px" height="60px"></a>
+ <a href="mailto:rababr1@educbe.ca"><img src="iconfinder_web_5_3924900.png" width="60px" height=50px></a></div></div>
+ <script src="finalR.js"></script>
+ <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+ </script>
 </body>
 </html>
