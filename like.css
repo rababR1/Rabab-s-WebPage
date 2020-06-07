@@ -176,14 +176,14 @@ h2{
   float: left;
   background-color:none;
   border: solid lightblue;
-  width:40%;
-  margin-left: 3em;
+  width:45%;
+  margin-left: 4cm;
 
 }
 .column2{
   float: left;
   border: none;
-  width:40%;}
+  width:30%;}
 .row:after{
   content:"";
   display: table;
