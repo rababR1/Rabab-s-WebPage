@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official site of Rabab Rahman</title>
+    <link href="RababR.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="title">
+        <div id=nav class=sideNav>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="About Me.html">About Me</a>
+            <a href="creations.html">Projects</a>
+            <a href="interests.html">My Interests</a>
+            <a href="beliefs.html">What I believe...</a></div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span>
+    <style type= "text/css">
+        body{
+            background-image: url(photo-of-starry.jpg);
+            background-size:cover
+            /*background-attachement=fixed;*/
+        }
+        h1{
+            margin:0
+        }
+        </style>
+        <div class="focus-in-expand">
+    <div class=swirl-in-bck>
+	<p>Hey, I'm...</p>
+    <h1>Rabab Rahman</h1>
+    </div>
+<br>
+<span>
+<div class="mySlides fade">
+   <div class="numbertext"></div>
+   <img src="Rabab_picture1.JPG" style="width:100%">
+</div>
+<div class="mySlides fade">
+    <img src="Rabab_picture2.JPG" style="width:100%">
+</div>
+<div class="mySlides fade">
+    <img src= "Rabab_picture3.JPG" style= "width:100%">
+</div>
+</div>
+</div>
+<div class="mySlides fade">
+    <img src="Rabab_picture4.JPG" style="width:99%">
+</div>
+</div></span>
+<br>
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+<div class= multimedia-container>
+<div class="multimedia">
+<h2>Follow Me!</h2>
+<a href="https://codepen.io/Rababr1"><img src="iconfinder_56_939818.png" width="60px" height=60px></a>
+ <a href=https://www.twitch.tv/rababr1><img src="iconfinder_twitch_5017729.png"width="60px" height=60px></a>
+ <a href="https://repl.it/@RababRahman"><img src="repl.it button.png" width="60px" height=60px></a>
+ <a href="mailto:rababr1@educbe.ca"><img src="iconfinder_web_5_3924900.png" width="60px" height=50px></a></div></div>
+ <script src="finalR.js"></script>
+ <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+ </script>
+</body>
+</html>
